@@ -2,10 +2,7 @@
 // Cliente selecciona un items para su almuerzo
 alert('Bienvenido a Los Pollos Hermanos' + '\n\nA continuación podrás elegir el menú a tu gusto!');
 
-// ENTRADA 
-// ENTRADA 
-// ENTRADA 
-// ENTRADA 
+// ENTRADA  ENTRADA  ENTRADA  ENTRADA 
 
 //Inicia el pedido con las entradas, contamos con 3 opciones
 let elegirEntrada = prompt('Elija su entrada ingresando el número al que corresponda:' + '\n\n (1) Blue Ensalada' + '\n (2) Sky Pure' + '\n (3) Meth Sopa');
@@ -30,7 +27,7 @@ let entrada3 = new Entrada('Meth Sopa', 3, 5);
 function seleccionarEntrada(numeroEntrada) {
   switch (numeroEntrada) {
     case "1":
-      alert(entrada1.agregarEntrada(numeroEntrada));
+      console.log(entrada1.agregarEntrada(numeroEntrada));
       break;
     case "2":
       alert(entrada2.agregarEntrada(numeroEntrada));
@@ -44,16 +41,13 @@ function seleccionarEntrada(numeroEntrada) {
   }
 }
 
-// Bucle que repite la solicitud de ingreso de pedido hasta que el usuario ingrese "salir"
-while (elegirEntrada != 'ESC') {
-  seleccionarEntrada(elegirEntrada);
-  elegirEntrada = prompt('Elija su entrada ingresando el número al que corresponda:' + '\n\n (1) Blue Ensalada' + '\n (2) Sky Pure' + '\n (3) Meth Sopa' + '\n\n Escriba "ESC" para cancelar la orden');
-}
+// // Bucle que repite la solicitud de ingreso de pedido hasta que el usuario ingrese "salir"
+// while (elegirEntrada != 'ESC') {
+//   seleccionarEntrada(elegirEntrada);
+//   elegirEntrada = prompt('Elija su entrada ingresando el número al que corresponda:' + '\n\n (1) Blue Ensalada' + '\n (2) Sky Pure' + '\n (3) Meth Sopa' + '\n\n Escriba "ESC" para cancelar la orden');
+// }
 
-// PLATO DE FONDO 
-// PLATO DE FONDO 
-// PLATO DE FONDO 
-// PLATO DE FONDO 
+// PLATO DE FONDO  PLATO DE FONDO  PLATO DE FONDO  PLATO DE FONDO 
 
 let elegirFondo = prompt('Elija su plato de fondo ingresando el número al que corresponda' + '\n\n (1) Tuco Taco' + '\n (2) Tortuga Veggie Burger' + '\n (3) Skinny Chicken Pete' + '\n (4) Badger Nuggets' + '\n (5) Skyler Royal Burger' + '\n (6) Salamanca Cheeseburger');
 
@@ -103,16 +97,13 @@ function seleccionarFondo(numeroFondo) {
   }
 }
 
-// Bucle que repite la solicitud de ingreso de pedido hasta que el usuario ingrese "salir"
-while (elegirFondo != 'ESC') {
-  seleccionarFondo(elegirFondo);
-  elegirFondo = prompt('Elija su plato de fondo ingresando el número al que corresponda' + '\n\n (1) Tuco Taco' + '\n (2) Tortuga Veggie Burger' + '\n (3) Skinny Chicken Pete' + '\n (4) Badger Nuggets' + '\n (5) Skyler Royal Burger' + '\n (6) Salamanca Cheeseburger' + '\n\n Escriba "ESC" para cancelar la orden');
-}
+// // Bucle que repite la solicitud de ingreso de pedido hasta que el usuario ingrese "salir"
+// while (elegirFondo != 'ESC') {
+//   seleccionarFondo(elegirFondo);
+//   elegirFondo = prompt('Elija su plato de fondo ingresando el número al que corresponda' + '\n\n (1) Tuco Taco' + '\n (2) Tortuga Veggie Burger' + '\n (3) Skinny Chicken Pete' + '\n (4) Badger Nuggets' + '\n (5) Skyler Royal Burger' + '\n (6) Salamanca Cheeseburger' + '\n\n Escriba "ESC" para cancelar la orden');
+// }
 
-// POSTRE
-// POSTRE
-// POSTRE
-// POSTRE
+// POSTRE  POSTRE  POSTRE  POSTRE
 
 let elegirPostre = prompt('Elija el postre ingresando el número al que corresponda' + '\n\n (1) White Lemon Pie' + '\n (2) Pinkman Cheesecake' + '\n (3) Gus Chocolate Cake');
 
@@ -150,10 +141,18 @@ function seleccionarPostre(numeroPostre) {
   }
 }
 
-// Bucle que repite la solicitud de ingreso de pedido hasta que el usuario ingrese "salir"
-while (elegirPostre != 'ESC') {
-  seleccionarPostre(elegirPostre);
-  elegirPostre = prompt('Elija su plato de fondo ingresando el número al que corresponda' + '\n\n (1) White Lemon Pie' + '\n (2) Pinkman Cheesecake' + '\n (3) Gus Chocolate Cake' + '\n\n Escriba "ESC" para cancelar la orden');
-}
+// ARRAY QUE CAPTA LOS PRODUCTOS SELECCIONADOS CON METODO PUSH
+let orden1 = [];
+
+console.log(orden1.push(seleccionarEntrada(elegirEntrada)));
+console.log(orden1.push(seleccionarFondo(elegirFondo)));
+console.log(orden1.push(seleccionarPostre(elegirPostre)));
+console.log(orden1);
+// // Bucle que repite la solicitud de ingreso de pedido hasta que el usuario ingrese "salir"
+// while (elegirPostre != 'ESC') {
+//   seleccionarPostre(elegirPostre);
+//   elegirPostre = prompt('Elija su plato de fondo ingresando el número al que corresponda' + '\n\n (1) White Lemon Pie' + '\n (2) Pinkman Cheesecake' + '\n (3) Gus Chocolate Cake' + '\n\n Escriba "ESC" para cancelar la orden');
+// }
+
 
 
